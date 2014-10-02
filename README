@@ -1,0 +1,10 @@
+I am looking forwards to giving Friday's tutorial "From SQL to NoSQL". In order to not waste time at the start on setting things up, please make sure you have the following things installed *and* working:
+
+    A MongoDB 2.6 release (from https://www.mongodb.org/downloads) — for many Linux distrbutions, there are also packages (see further down the page). Please, if at all possible, use a 64-bit release. Don't forget to start the daemon.
+    PHP 5.3 or later, with 5.5 or 5.6 preferrable.
+    The MongoDB extension for PHP, version 1.5.x. Either with "pecl install" or with a distribution's package as long as it is at least 1.5.0. For Windows, you can find packages on the PECL site: http://pecl.php.net/package/mongo/1.5.7/windows
+    A git client that works on the command line.
+
+To test whether everything works, the following should run on the command line:
+- `php --ri mongo` (should show version information)
+- `php -r '$m = new MongoClient; var_dump( $m->connected );'` (should output "bool(true)")
